@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TOI</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <style type="text/css">
+        #mytable tbody tr td,
+        #mytable thead tr td {
+            text-align: center;
+        }
+        #mytable thead tr td,
+        #mytable tr td:first-child{ 
+            font-weight: bolder;            
+        }
+        #mytable thead caption {
+            font-weight: 120%;
+        }
+    </style>
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">TOI</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>TOI Admin</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>TOI Admin</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> TOI Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="#"> &nbsp; </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Categorywise Analytics</a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-fw fa-table"></i> CDR Analytics</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header" style="padding: 0px !important; margin: 0px !important;">
+                            Times of India <small> - CDR Details</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <a href="categorywise_data.html"><i class="fa fa-dashboard"></i> CDR Analytics </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <!--<div class="container-fluid">
+                    <div class="col-sm-12 well">
+                        <table class="table table-bordered" style="width: 100% !important; left: 0px !important;">    
+                            <tbody>
+                              <tr>
+                                <td><b>Advertiser Name</b></td>
+                                <td style="color: blue;">Ananda</td>
+                              </tr>
+                              <tr>
+                                <td><b>Phone Number</b></td>
+                                <td><a href="tel://+61469857857">+61 469 857 857</a></td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Ad Category</td>
+                                <td style="color: orange; font-weight: bold;">Cars for Sale</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Ad text</td>
+                                <td style="color: orange; font-weight: bold;">(e.g. Honda Civic 2010, 56000 Km., Very good condition…. )</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Smart Number</td>
+                                <td style="color: orange; font-weight: bold;">8736648939</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Ad Period</td>
+                                <td style="color: orange; font-weight: bold;">19Nov 2016 - 26 Nov 2016</td>
+                                
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>-->
+
+                <div class="container-fluid">
+                    <div class="col-sm-12 well" style="float: right;">
+                        <!-- <a class="btn btn-sm btn-primary" href="#" onclick="range();">Range</a> -->
+                        <!-- <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" /> -->
+                        <div 
+                            id="reportrange" 
+                            class="pull-right" 
+                            style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                            <span></span> 
+                            <b class="caret"></b>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="chart-container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <!-- table container -->
+                <style type="text/css">
+                .table{
+                    /*width: 86% !important;*/
+                    position: relative;
+                    /*left: 140px;*/
+                }
+                .tbody > tr > td {
+                    padding: 3px 15px !important;
+                }
+                </style>
+                <div id="mytableDiv">
+                    
+                </div>
+                <table class="table table-bordered" id="mytable">
+  <caption>Monthly savings</caption>
+                <thead><tr><td>Date / Time</td><td>Total Answered Calls</td><td>Total Missed Calls</td><td>Total Responses</td></tr></thead>
+                </table>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script type="text/javascript">
+        /*
+        *Updated code here*
+        */
+        $(document).ready(function() {
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                   'Today': [moment(), moment()],
+                   'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                   'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                   'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                   'This Month': [moment().startOf('month'), moment().endOf('month')],
+                   'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+            cb(start, end);
+        });
+
+        function cb(start, end) {
+
+                $('#mytable tbody').empty();
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            var startdatefrmt,enddatefrmt;
+            startdatefrmt = start.format('YYYY-MM-DD');
+            enddatefrmt = end.format('YYYY-MM-DD');
+            getdata(startdatefrmt,enddatefrmt);
+        }
+        function getdata(startdate,enddate) {
+            //getting json data by sending starting date and ending date.
+            var sendingObj = {start : startdate, end: enddate};
+            //console.log(sendingObj);
+            $.get( "getdata.php", sendingObj)
+            .done(function( data ) {
+
+            loadhighchart(data);
+            renderTable(data);
+            });
+
+        }
+         function loadhighchart(jsonobj) {
+
+            var jsonobj = JSON.parse(jsonobj);
+            Highcharts.chart('chart-container', {
+                title: {
+                    text: 'Calls from Prospects'
+                },
+                xAxis: jsonobj.xaxis,
+
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'top',
+                    floating: true,
+                    backgroundColor: '#FFFFFF'
+                },
+                labels: {
+                    items: [{
+                        html: 'Total Call Prospects',
+                        style: {
+                            left: '50px',
+                            top: '18px',
+                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                        }
+                    }]
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true,
+                            color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                        }
+                    }
+                },
+                colors: [
+                    '#A5A5A5',
+                    '#F17C40',
+                    '#4169E1'
+                ],
+                series: jsonobj.json_data,
+            });
+        }
+
+        function renderTable(jsonobj) {
+            var jsonobj = JSON.parse(jsonobj);
+
+
+$.each(jsonobj.xaxis.categories, function (index, value) {
+    //0 - answered, 1- missed, 2- total
+        var newRowContent = "<tr><td>"+value+"</td><td>"+jsonobj.json_data[0].data[index]+"</td><td>"+jsonobj.json_data[1].data[index]+"</td><td>"+jsonobj.json_data[2].data[index]+"</td></tr>";
+        $(newRowContent).appendTo($("#mytable"));
+    });
+        }
+
+        /*
+        Ends Here
+        */
+       
+    </script>
+</body>
+
+</html>
